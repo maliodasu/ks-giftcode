@@ -1,6 +1,6 @@
-# Whiteout Survival Gift Code Redemption Script
+# KLingshot Gift Code Redemption Script
 
-Python script that automates the process of redeeming gift codes in the game **Whiteout Survival**. It reads a list of Player IDs from one or more `.csv` files, sends requests to the game's giftcode redemption API, and redeems the specified gift code for each player.
+Python script that automates the process of redeeming gift codes in the game **Kingshot**. It reads a list of Player IDs from one or more `.csv` files, sends requests to the game's giftcode redemption API, and redeems the specified gift code for each player.
 
 ---
 
@@ -33,8 +33,8 @@ Python script that automates the process of redeeming gift codes in the game **W
 1.  **Get the Script**:
     *   Clone the repository:
         ~~~bash
-        git clone https://github.com/justncodes/wos-giftcode.git
-        cd wos-giftcode
+        git clone https://github.com/justncodes/ks-giftcode.git
+        cd ks-giftcode
         ~~~
     *   Or, download the `redeem_codes.py` script directly from the repository.
 
@@ -80,30 +80,30 @@ python redeem_codes.py --csv <path_or_pattern> --code <gift_code>
 
 -   `--csv`: Specifies the player ID source. Can be:
     *   A path to a single `.csv` file (e.g., `player_ids.csv` or `C:\Users\You\Documents\ids.csv`).
-    *   A path to a folder/directory containing `.csv` files (e.g., `/home/user/wos_ids/` or `.` for the current directory). The script will process all files ending in `.csv` within that folder.
+    *   A path to a folder/directory containing `.csv` files (e.g., `/home/user/ks_ids/` or `.` for the current directory). The script will process all files ending in `.csv` within that folder.
     *   The pattern `*.csv` to process all `.csv` files located in the *same directory as the script itself*.
--   `--code`: The gift code you want to redeem (e.g., `WOS2025`).
+-   `--code`: The gift code you want to redeem (e.g., `KSFB150K`).
 
 ### Examples
 
 *   **Process a specific file in the current directory:**
     ~~~bash
-    python redeem_codes.py --csv player_ids.csv --code ILoveWOS
+    python redeem_codes.py --csv player_ids.csv --code KSFB150K
     ~~~
 
 *   **Process a specific file using its full path:**
     ~~~bash
-    python redeem_codes.py --csv "/path/to/your/data/player_ids.csv" --code ILoveWOS
+    python redeem_codes.py --csv "/path/to/your/data/player_ids.csv" --code KSFB150K
     ~~~
 
 *   **Process all `.csv` files in a specific folder:**
     ~~~bash
-    python redeem_codes.py --csv /path/to/your/folder --code ILoveWOS
+    python redeem_codes.py --csv /path/to/your/folder --code KSFB150K
     ~~~
 
 *   **Process all `.csv` files located in the script's directory:**
     ~~~bash
-    python redeem_codes.py --csv *.csv --code ILoveWOS
+    python redeem_codes.py --csv *.csv --code KSFB150K
     ~~~
 
 ---
@@ -114,7 +114,7 @@ python redeem_codes.py --csv <path_or_pattern> --code <gift_code>
 
 ~~~plaintext
 2025-02-21 10:30:00 - === Starting redemption process at 2025-02-21 10:30:00 ===
-2025-02-21 10:30:00 - Gift Code: ILoveWOS
+2025-02-21 10:30:00 - Gift Code: KSFB150K
 2025-02-21 10:30:00 - Input Path/Pattern: ids_comma.csv
 2025-02-21 10:30:00 - Log File: /path/to/script/redeemed_codes.txt
 2025-02-21 10:30:00 - ------------------------------
@@ -170,33 +170,15 @@ All console output is automatically appended to a log file named `redeemed_codes
 
 ## Changelog
 
-
-### v2.2.0 (Current Version)
-- Added support for reading comma-separated player IDs within CSV files.
-- Improved CSV file path handling in `--csv` argument (folder path, `*.csv` pattern).
-- Enhanced logging detail and error categorization.
-
-### v2.1.0
-- Added support for processing all .csv files in a folder or the script's directory using `*.csv`.
-- Improved error handling for missing or invalid .csv files.
-
-### v2.0.0
-- Added retry logic for failed requests (e.g., `TIMEOUT RETRY`).
-- Display player nicknames during processing.
-- Added Unicode support for special characters and foreign alphabets.
-- Added a summary report of redemptions at the end.
-- Improved error handling and logging.
-
-### v1.0.0 (Initial Release)
-- Basic functionality: CSV import (newline separated), command-line args, API requests.
-- Initial error handling and rate limiting.
+### v1.0.0 (Initial Release, Current Version)
+- Fully functional - it's really just a 'reskin' of [wos-giftcode](https://github.com/justncodes/wos-giftcode)
 
 ---
 
 ## Credits
 
 - **Author**: justncodes (\[SIR\] Yolo on #340)
-- **Repository**: [wos-giftcode](https://github.com/justncodes/wos-giftcode)
+- **Repository**: [ks-giftcode](https://github.com/justncodes/ks-giftcode)
 
 ---
 
