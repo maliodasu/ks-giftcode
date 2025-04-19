@@ -1,4 +1,4 @@
-# KLingshot Gift Code Redemption Script
+# Kingshot Gift Code Redemption Script
 
 Python script that automates the process of redeeming gift codes in the game **Kingshot**. It reads a list of Player IDs from one or more `.csv` files, sends requests to the game's giftcode redemption API, and redeems the specified gift code for each player.
 
